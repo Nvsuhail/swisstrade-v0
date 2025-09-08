@@ -1,0 +1,228 @@
+---
+// Minimal Premium Catalogue Form Component
+---
+
+<section class="relative py-20 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Simple Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+        Get Your Free Catalogue
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Fill in your details below and we'll send you our comprehensive medical equipment catalogue instantly.
+      </p>
+    </div>
+
+    <!-- Clean Form Container -->
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl p-8 lg:p-10">
+        <form id="catalogueForm" class="space-y-8">
+          
+          <!-- Required Fields -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+              Required Information
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Name Field -->
+              <div class="space-y-2">
+                <label for="name" class="block text-sm font-medium text-gray-700">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  class="w-full px-4 py-3 bg-gray-50 rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 text-gray-900 placeholder-gray-400"
+                  placeholder="Enter your full name"
+                >
+              </div>
+              
+              <!-- Email Field -->
+              <div class="space-y-2">
+                <label for="email" class="block text-sm font-medium text-gray-700">
+                  Email Address <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="w-full px-4 py-3 bg-gray-50 rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 text-gray-900 placeholder-gray-400"
+                  placeholder="Enter your email address"
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional Fields -->
+          <div class="space-y-6 pt-6 border-t border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+              Additional Information <span class="text-sm font-normal text-gray-500">(Optional)</span>
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Company Field -->
+              <div class="space-y-2">
+                <label for="company" class="block text-sm font-medium text-gray-600">
+                  Company Name
+                </label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company"
+                  class="w-full px-4 py-3 bg-gray-50 rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 text-gray-900 placeholder-gray-400"
+                  placeholder="Enter your company name"
+                >
+              </div>
+              
+              <!-- Phone Field -->
+              <div class="space-y-2">
+                <label for="phone" class="block text-sm font-medium text-gray-600">
+                  Phone Number
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  class="w-full px-4 py-3 bg-gray-50 rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 text-gray-900 placeholder-gray-400"
+                  placeholder="Enter your phone number"
+                >
+              </div>
+            </div>
+
+            <!-- Country Field -->
+            <div class="space-y-2">
+              <label for="country" class="block text-sm font-medium text-gray-600">
+                Country
+              </label>
+              <select 
+                id="country" 
+                name="country"
+                class="w-full px-4 py-3 bg-gray-50 rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 text-gray-900"
+              >
+                <option value="">Select your country</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="IN">India</option>
+                <option value="SG">Singapore</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="CH">Switzerland</option>
+                <option value="JP">Japan</option>
+                <option value="KR">South Korea</option>
+                <option value="CN">China</option>
+                <option value="BR">Brazil</option>
+                <option value="MX">Mexico</option>
+                <option value="ZA">South Africa</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="EG">Egypt</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="pt-6">
+            <button 
+              type="submit" 
+              class="w-full py-4 px-8 bg-blue-600 text-white font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/30 hover:bg-blue-700 text-lg" 
+              style="font-family: 'Space Grotesk', sans-serif;"
+            >
+              Get Free Catalogue Now
+            </button>
+          </div>
+        </form>
+        
+        <!-- Subtle Direct Download Link -->
+        <div class="mt-8 pt-6 border-t border-gray-100 text-center">
+          <p class="text-xs text-gray-400 mb-2">Or download instantly:</p>
+          <a 
+            href="/catalogue.pdf" 
+            class="text-xs text-gray-400 hover:text-blue-500 transition-colors duration-300 inline-flex items-center" 
+            download
+          >
+            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Download catalogue directly
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('catalogueForm');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    
+    // Basic validation
+    if (!name || !email) {
+      alert('Please fill in all required fields (Name and Email)');
+      return;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+    
+    // Simulate form submission
+    const button = form.querySelector('button[type="submit"]');
+    const originalHTML = button.innerHTML;
+    
+    button.innerHTML = 'Sending...';
+    button.disabled = true;
+    button.style.opacity = '0.8';
+    
+    setTimeout(() => {
+      alert('Thank you! Your catalogue request has been submitted successfully. You will receive it via email shortly.');
+      form.reset();
+      button.innerHTML = originalHTML;
+      button.disabled = false;
+      button.style.opacity = '1';
+    }, 2000);
+  });
+});
+</script>
+
+<style>
+/* Clean focus effects */
+input:focus, select:focus {
+  transform: translateY(-1px);
+}
+
+/* Smooth transitions */
+input, select, button {
+  transition: all 0.3s ease;
+}
+
+/* Button hover effects */
+button[type="submit"]:hover {
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  transform: none;
+}
+</style>
